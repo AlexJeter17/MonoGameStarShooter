@@ -7,6 +7,7 @@
 
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Enemy EnemyOne;
 
         public Game1()
         {
@@ -29,6 +30,9 @@
             SpriteArt.Load(Content);
 
             playerUser.loadImg(SpriteArt.Player);
+
+            Texture2D texture = Content.Load<Texture2D>("Sprites/EnemyStartship1FIX");
+            EnemyOne = new Enemy();
 
             // TODO: use this.Content to load your game content here
         }

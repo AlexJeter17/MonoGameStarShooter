@@ -5,6 +5,7 @@ namespace MonoGameStarShooter
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Enemy EnemyOne;
 
         public Game1()
         {
@@ -23,6 +24,9 @@ namespace MonoGameStarShooter
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            Texture2D texture = Content.Load<Texture2D>("Sprites/EnemyStartship1FIX");
+            EnemyOne = new Enemy();
 
             // TODO: use this.Content to load your game content here
         }

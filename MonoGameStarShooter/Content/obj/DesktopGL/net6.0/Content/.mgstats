@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Ajayj/source/repos/MonoGameStarShooter/MonoGameStarShooter/Content/Sprites/ball.png","C:/Users/Ajayj/source/repos/MonoGameStarShooter/MonoGameStarShooter/Content/bin/DesktopGL/Content/Sprites/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0.1430766
+"C:/Users/Ajayj/source/repos/MonoGameStarShooter/MonoGameStarShooter/Content/Sprites/EnemyStarship1FIX.png","C:/Users/Ajayj/source/repos/MonoGameStarShooter/MonoGameStarShooter/Content/bin/DesktopGL/Content/Sprites/EnemyStarship1FIX.xnb","TextureProcessor","Texture2DContent",1465,5885,0.0018801

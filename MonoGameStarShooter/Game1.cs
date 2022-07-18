@@ -1,8 +1,10 @@
-﻿
-namespace MonoGameStarShooter
+﻿namespace MonoGameStarShooter
 {
     public class Game1 : Game
     {
+        //Initial Variables
+        private Player playerUser;
+
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
@@ -16,6 +18,7 @@ namespace MonoGameStarShooter
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.4f);
 
             base.Initialize();
         }
@@ -23,6 +26,9 @@ namespace MonoGameStarShooter
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            SpriteArt.Load(Content);
+
+            playerUser.loadImg(SpriteArt.Player);
 
             // TODO: use this.Content to load your game content here
         }
@@ -32,7 +38,7 @@ namespace MonoGameStarShooter
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            playerUser.Update();
 
             base.Update(gameTime);
         }
@@ -42,6 +48,9 @@ namespace MonoGameStarShooter
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+            playerUser.Draw(_spriteBatch);
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

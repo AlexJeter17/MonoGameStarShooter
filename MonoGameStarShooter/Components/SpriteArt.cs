@@ -15,7 +15,11 @@ namespace MonoGameStarShooter
         public static void Load(ContentManager content)
         {
             Player = content.Load<Texture2D>("Sprites/ball");
+<<<<<<< HEAD
             EnemyTypeOne = content.Load<Texture2D>("Sprites/EnemyStarship1Fix");
+=======
+            Console.WriteLine(Player);
+>>>>>>> main
         }
 
         //Call the texture by using "SpriteArt.Name" ex "image = SpriteArt.Player" 

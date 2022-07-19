@@ -13,6 +13,8 @@
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+
+            _graphics.PreferredBackBufferHeight = 1280;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -20,9 +22,7 @@
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.4f);
-
-            EnemyOne = new Enemy();
+            playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.2f);
 
             EnemyOne = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);
             EnemyTwo = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);

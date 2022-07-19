@@ -20,6 +20,7 @@
         {
             // TODO: Add your initialization logic here
             playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.4f);
+            EnemyOne = new Enemy();
 
             base.Initialize();
         }
@@ -27,21 +28,14 @@
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+
             SpriteArt.Load(Content);
-
             playerUser.loadImg(SpriteArt.Player);
-
-            Texture2D texture = Content.Load<Texture2D>("Sprites/EnemyStartship1FIX");
-            EnemyOne = new Enemy();
-
             // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
             playerUser.Update();
 
             base.Update(gameTime);

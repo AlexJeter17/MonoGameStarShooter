@@ -6,16 +6,44 @@ using System.Threading.Tasks;
 
 namespace MonoGameStarShooter
 {
-    internal class Enemy
+    internal abstract class Enemy
     {
-        int hp; // This is the health Points
-        string filePath; // This is the path for the photos 
+        int hp; 
+        // Random rand = new Random();
+        int widthOfGame;
+        protected Vector2 Position;
+        protected int dropSpeed = 1;
+        protected Texture2D ImageEn;
 
+        // public Enemy(int width) { 
+        //    widthOfGame = width;    
+        //    Position = new Vector2(rand.Next(widthOfGame), 0);
+        //    hp = 1;
+        //}
 
-        // Create random Sprite for enemies -- Found picture for 1 enemy
+        public void loadIMG(Texture2D img) { 
 
-        // be able to move downwards and spawn randomly on x-axis
+            ImageEn = img;
+        
+        }
 
+        public void updates() {
+
+            Position.Y += dropSpeed;
+
+        }
+
+        public void hit() {
+
+            hp -= 1;
+
+        }
+
+        public void drawEn(SpriteBatch spriteBatch) { 
+        
+            spriteBatch.Draw(ImageEn, Position, Color.White);
+        
+        }
 
     }
 }

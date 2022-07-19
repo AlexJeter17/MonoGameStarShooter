@@ -13,6 +13,8 @@
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+
+            _graphics.PreferredBackBufferHeight = 1280;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -20,7 +22,8 @@
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.4f);
+            playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.2f);
+
             EnemyOne = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);
             EnemyTwo = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);
 
@@ -29,15 +32,18 @@
             EnemyOne.spawn(rand.Next( _graphics.PreferredBackBufferWidth));
             EnemyTwo.spawn(rand.Next( _graphics.PreferredBackBufferWidth));
 
+
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            SpriteArt.Load(Content);
 
+            SpriteArt.Load(Content);
             playerUser.loadImg(SpriteArt.Player);
+
+
             EnemyOne.loadIMG(SpriteArt.EnemyTypeOne);
             EnemyTwo.loadIMG(SpriteArt.EnemyTypeOne);
 
@@ -48,9 +54,6 @@
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
             playerUser.Update();
             EnemyOne.updates();
             EnemyTwo.updates();

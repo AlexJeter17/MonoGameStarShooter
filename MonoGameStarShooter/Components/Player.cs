@@ -4,9 +4,11 @@ using System;
 
 namespace MonoGameStarShooter
 {
+    //Stuff
     class Player
     {
         //Initialize variables
+
         Texture2D image;
         Vector2 playerPos;
         float sideSpeed;
@@ -18,7 +20,8 @@ namespace MonoGameStarShooter
             //Center Player to screen width, and position 
             playerPos = new Vector2(x, y);
             //playerPos = Game1.ScreenSize / 2;
-            sideSpeed = 1;
+            sideSpeed = 5;
+
         }
 
         //Functions
@@ -29,8 +32,15 @@ namespace MonoGameStarShooter
         //Update method, execute every time Game1.cs calls Update
         public void Update()
         {
-            //Movement
-            //...
+            //Keyboard Logic
+            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A)) 
+            {
+                playerPos.X -= sideSpeed;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
+            {
+                playerPos.X += sideSpeed;
+            }
         }
 
         //Draw method
@@ -38,8 +48,5 @@ namespace MonoGameStarShooter
         {
             spriteBatch.Draw(image, playerPos, Color.White);
         }
-
-
-
     }
 }

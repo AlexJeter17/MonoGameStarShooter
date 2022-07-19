@@ -7,7 +7,8 @@
 
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private Enemy EnemyOne;
+        private lvlOneEnemy EnemyOne;
+        private lvlOneEnemy EnemyTwo;
 
         public Game1()
         {
@@ -20,7 +21,17 @@
         {
             // TODO: Add your initialization logic here
             playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.4f);
+
             EnemyOne = new Enemy();
+
+            EnemyOne = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);
+            EnemyTwo = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);
+
+            Random rand = new Random();
+
+            EnemyOne.spawn(rand.Next( _graphics.PreferredBackBufferWidth));
+            EnemyTwo.spawn(rand.Next( _graphics.PreferredBackBufferWidth));
+
 
             base.Initialize();
         }
@@ -31,12 +42,21 @@
 
             SpriteArt.Load(Content);
             playerUser.loadImg(SpriteArt.Player);
+
+
+            EnemyOne.loadIMG(SpriteArt.EnemyTypeOne);
+            EnemyTwo.loadIMG(SpriteArt.EnemyTypeOne);
+
+
+
             // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
             playerUser.Update();
+            EnemyOne.updates();
+            EnemyTwo.updates();
 
             base.Update(gameTime);
         }
@@ -48,6 +68,8 @@
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
             playerUser.Draw(_spriteBatch);
+            EnemyOne.drawEn(_spriteBatch);
+            EnemyTwo.drawEn(_spriteBatch);
             _spriteBatch.End();
 
             base.Draw(gameTime);

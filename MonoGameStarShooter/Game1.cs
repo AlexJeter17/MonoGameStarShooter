@@ -41,7 +41,7 @@
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             SpriteArt.Load(Content);
-            playerUser.loadImg(SpriteArt.Player);
+            playerUser.loadImage(SpriteArt.Player);
 
 
             EnemyOne.loadIMG(SpriteArt.EnemyTypeOne);

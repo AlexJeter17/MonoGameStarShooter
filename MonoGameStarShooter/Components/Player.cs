@@ -9,6 +9,11 @@ namespace MonoGameStarShooter
     {
         //Initialize variables unique to player
         float sideSpeed;
+        public List<Bullet> bulletList = new List<Bullet>();
+
+        //Firerate
+        const int fireRate = 20;
+        int cooldownRemaining = 0;
 
         //Constructor
         public Player(float x, float y)
@@ -31,6 +36,21 @@ namespace MonoGameStarShooter
             if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
             {
                 pos.X += sideSpeed;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0)
+            {
+
+                cooldownRemaining = fireRate;
+                bulletList.Add(new Bullet(base.pos, SpriteArt.Bullet));
+
+            }
+            if (cooldownRemaining > 0) { cooldownRemaining--; }
+        }
+        public void updateBullets()
+        {
+            for (int i = 0; i < bulletList.Count; i++)
+            {
+                bulletList[i].update();
             }
         }
     }

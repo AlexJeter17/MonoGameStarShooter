@@ -14,7 +14,7 @@
         {
             _graphics = new GraphicsDeviceManager(this);
 
-            _graphics.PreferredBackBufferHeight = 1280;
+            _graphics.PreferredBackBufferHeight = 720;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -45,7 +45,7 @@
 
 
             EnemyOne.loadIMG(SpriteArt.EnemyTypeOne);
-            EnemyTwo.loadIMG(SpriteArt.EnemyTypeOne);
+            EnemyTwo.loadIMG(SpriteArt.EnemyTypeTwo);
 
 
 

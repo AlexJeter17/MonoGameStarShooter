@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 
 namespace MonoGameStarShooter
 {
-    internal abstract class Enemy
+    internal class Enemy
     {
-        int hp; 
-        // Random rand = new Random();
-        int widthOfGame;
         protected Vector2 Position;
         protected int dropSpeed = 1;
         protected Texture2D ImageEn;
+        
+        public Enemy(int width)
+        {
 
-        // public Enemy(int width) { 
-        //    widthOfGame = width;    
-        //    Position = new Vector2(rand.Next(widthOfGame), 0);
-        //    hp = 1;
-        //}
 
+            Position = new Vector2(width, 0);
+        }
         public void loadIMG(Texture2D img) { 
 
             ImageEn = img;
@@ -35,7 +32,7 @@ namespace MonoGameStarShooter
 
         public void hit() {
 
-            hp -= 1;
+            //hp -= 1;
 
         }
 

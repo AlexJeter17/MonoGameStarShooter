@@ -7,8 +7,9 @@
 
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private lvlOneEnemy EnemyOne;
-        private lvlOneEnemy EnemyTwo;
+        private Enemy EnemyOne;
+        private Enemy EnemyTwo;
+        private Bullet shooting;
 
         public Game1()
         {
@@ -23,14 +24,10 @@
         {
             // TODO: Add your initialization logic here
             playerUser = new Player(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 1.2f);
-
-            EnemyOne = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);
-            EnemyTwo = new lvlOneEnemy(_graphics.PreferredBackBufferWidth);
-
             Random rand = new Random();
-
-            EnemyOne.spawn(rand.Next( _graphics.PreferredBackBufferWidth));
-            EnemyTwo.spawn(rand.Next( _graphics.PreferredBackBufferWidth));
+            
+            EnemyOne = new Enemy(rand.Next(_graphics.PreferredBackBufferWidth));
+            EnemyTwo = new Enemy(rand.Next(_graphics.PreferredBackBufferWidth));
 
 
             base.Initialize();
@@ -42,7 +39,7 @@
 
             SpriteArt.Load(Content);
             playerUser.loadImage(SpriteArt.Player);
-
+            
 
             EnemyOne.loadIMG(SpriteArt.EnemyTypeOne);
             EnemyTwo.loadIMG(SpriteArt.EnemyTypeTwo);
@@ -57,6 +54,7 @@
             playerUser.Update();
             EnemyOne.updates();
             EnemyTwo.updates();
+            playerUser.updateBullets();
 
             base.Update(gameTime);
         }
@@ -70,6 +68,13 @@
             playerUser.Draw(_spriteBatch);
             EnemyOne.drawEn(_spriteBatch);
             EnemyTwo.drawEn(_spriteBatch);
+            for (int i = 0; i < playerUser.bulletList.Count; i++)
+            {
+                playerUser.bulletList[i].drawBullet(_spriteBatch);
+            }
+
+
+
             _spriteBatch.End();
 
             base.Draw(gameTime);

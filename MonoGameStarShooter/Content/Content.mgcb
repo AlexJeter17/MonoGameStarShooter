@@ -25,6 +25,18 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/EnemyStarship1FIX.png
 
+#begin Sprites/New_Piskel-1.png.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/New_Piskel-1.png.png;Sprites/EnemyStarship2.png
+
 #begin Sprites/PlayerShip.png
 /importer:TextureImporter
 /processor:TextureProcessor

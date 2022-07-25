@@ -15,10 +15,6 @@
         {
             spriteBatch.Draw(texture, pos, Color.White);
         }
-        public virtual void createHitbox()
-        {
-            hitbox = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
-        }
         public virtual void loadImage(Texture2D image)
         {
             texture = image;

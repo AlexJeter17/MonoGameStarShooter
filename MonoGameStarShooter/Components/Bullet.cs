@@ -6,51 +6,31 @@ using System.Threading.Tasks;
 
 namespace MonoGameStarShooter
 {
-
-
-
-    internal class Bullet
+    class Bullet : Entity
     {
-        protected Vector2 PositionBullet;
-        public Texture2D ImageBullet;
         protected int hp;
         public int BulletSpeed = 8;
 
         public Bullet(Vector2 xy, Texture2D image) {
-            ImageBullet = image;
-            PositionBullet = xy;
-            PositionBullet.X += 47;
+            base.texture = image;
+            pos = xy;
+            pos.X += 47;
         
         }
 
         public void hit() {
-
             hp -= 1;
-
         }
 
-        public void update() {
+        public override void Update() {
 
-            PositionBullet.Y -= BulletSpeed;
+            pos.Y -= BulletSpeed;
 
-            if (PositionBullet.Y <= 0){ 
+            if (pos.Y <= 0){ 
             // Call the delete function
             
             }
         
         }
-
-        public void LoadBull(Texture2D img) {
-
-            ImageBullet = img;
-
-        }
-
-        public void drawBullet(SpriteBatch spriteBatch) {
-
-            spriteBatch.Draw(ImageBullet, PositionBullet, Color.White);
-
-        }
-
     }
 }

@@ -12,10 +12,10 @@ namespace MonoGameStarShooter
         public int BulletSpeed = 8;
 
         public Bullet(Vector2 xy, Texture2D image) {
-            base.texture = image;
+            base.texture = image;   
             pos = xy;
             pos.X += 47;
-        
+            createHitbox();
         }
 
         public void hit() {
@@ -25,7 +25,7 @@ namespace MonoGameStarShooter
         public override void Update() {
 
             pos.Y -= BulletSpeed;
-
+            updateHitbox();
             if (pos.Y <= 0){ 
             // Call the delete function
             

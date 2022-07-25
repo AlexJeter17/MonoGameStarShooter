@@ -14,11 +14,12 @@ namespace MonoGameStarShooter
         {
             base.texture = image;
             base.pos = new Vector2(width, 0);
+            createHitbox();
         }
         public override void Update() {
 
             pos.Y += dropSpeed;
-
+            updateHitbox();
         }
 
         public void hit() 

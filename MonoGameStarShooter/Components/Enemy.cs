@@ -6,41 +6,25 @@ using System.Threading.Tasks;
 
 namespace MonoGameStarShooter
 {
-    internal class Enemy
+    internal class Enemy : Entity
     {
-        protected Vector2 Position;
         protected int dropSpeed = 1;
-        protected Texture2D ImageEn;
         
-        public Enemy(int width)
+        public Enemy(int width, Texture2D image)
         {
-
-
-            Position = new Vector2(width, 0);
+            base.texture = image;
+            base.pos = new Vector2(width, 0);
+            createHitbox();
         }
-        public void loadIMG(Texture2D img) { 
+        public override void Update() {
 
-            ImageEn = img;
-        
-        }
-
-        public void updates() {
-
-            Position.Y += dropSpeed;
-
+            pos.Y += dropSpeed;
+            updateHitbox();
         }
 
-        public void hit() {
-
+        public void hit() 
+        {
             //hp -= 1;
-
         }
-
-        public void drawEn(SpriteBatch spriteBatch) { 
-        
-            spriteBatch.Draw(ImageEn, Position, Color.White);
-        
-        }
-
     }
 }

@@ -17,13 +17,14 @@ namespace MonoGameStarShooter
         int widthOfGame;
 
         //Constructor
-        public Player(float x, float y, int widthOfGame)
+        public Player(Vector2 centerPos, Texture2D image, int width)
         {
             //Center Player to screen width, and position 
-            base.pos = new Vector2(x, y);
+            pos = centerPos;
+            base.texture = image;
+            widthOfGame = width;
             //playerPos = Game1.ScreenSize / 2;
             sideSpeed = 5;
-            this.widthOfGame = widthOfGame;
         }
 
 
@@ -33,7 +34,7 @@ namespace MonoGameStarShooter
             //Keyboard Logic
             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A)) 
             {
-                if (pos.X > -15) {
+                if (pos.X > 0) {
                     pos.X -= sideSpeed;
                 }
 
@@ -42,27 +43,21 @@ namespace MonoGameStarShooter
             if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
             {
 
-                if (pos.X < widthOfGame - 114) {
+                if (pos.X < widthOfGame - 128) {
                     pos.X += sideSpeed;
                 }
 
                 //pos.X += sideSpeed;
             }
+            //Weapon Logic
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0)
             {
 
                 cooldownRemaining = fireRate;
-                bulletList.Add(new Bullet(base.pos, SpriteArt.Bullet));
+                EntityCollections.Instantiate(new Bullet(base.pos, SpriteArt.Bullet));
 
             }
             if (cooldownRemaining > 0) { cooldownRemaining--; }
-        }
-        public void updateBullets()
-        {
-            for (int i = 0; i < bulletList.Count; i++)
-            {
-                bulletList[i].update();
-            }
         }
     }
 }

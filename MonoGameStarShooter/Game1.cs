@@ -31,6 +31,7 @@
         {
             EntityCollections.Initialize(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
             EntityCollections.Update();
+            WaveManager.Update();
 
             base.Update(gameTime);
         }

@@ -6,18 +6,20 @@
         //All Entities
         static List<Entity> entities = new List<Entity>();
         //Entity specific lists
-        static List<Enemy> enemies = new List<Enemy>();
+        public static List<Enemy> enemies = new List<Enemy>();
         static List<Bullet> bullets = new List<Bullet>();
 
         static bool hasInitalized = false;
 
-        public static void Initialize(int screenW, int screenH)
+        public static int screenW;
+        public static int screenH;
+        public static void Initialize(int sW, int sH)
         {
             if (hasInitalized == false)
             {
+                screenW = sW;
+                screenH = sH;
                 Instantiate(new Player(new Vector2(screenW / 2, screenH / 1.2f), SpriteArt.Player, screenW));
-                Instantiate(new Enemy(random.Next(screenW), SpriteArt.EnemyTypeOne));
-                Instantiate(new Enemy(random.Next(screenW), SpriteArt.EnemyTypeTwo));
                 hasInitalized = true;
             }
         }

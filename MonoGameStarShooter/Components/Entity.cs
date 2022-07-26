@@ -3,8 +3,9 @@
     abstract class Entity
     {
         protected Texture2D texture;
-        protected Rectangle hitbox;
+        public Rectangle hitbox;
         public Vector2 pos;
+        public bool isActive = true;
 
         //Method must be implemented in derived class
         public abstract void Update();
@@ -15,13 +16,18 @@
         {
             spriteBatch.Draw(texture, pos, Color.White);
         }
+        public virtual void loadImage(Texture2D image)
+        {
+            texture = image;
+        }
         public virtual void createHitbox()
         {
             hitbox = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
         }
-        public virtual void loadImage(Texture2D image)
+        public virtual void updateHitbox()
         {
-            texture = image;
+            hitbox.X = (int)pos.X;
+            hitbox.Y = (int)pos.Y;
         }
     }
 }

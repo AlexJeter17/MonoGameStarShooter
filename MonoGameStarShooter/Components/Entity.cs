@@ -14,7 +14,16 @@
         //Example you can override the Draw method in the derived class, or just use as is.
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, pos, Color.White);
+            spriteBatch.Draw(
+                texture, 
+                pos, 
+                null,
+                Color.White,
+                0f,
+                Vector2.Zero,
+                GameManager.SCALE_FACTOR,
+                SpriteEffects.None,
+                0f);
         }
         public virtual void loadImage(Texture2D image)
         {
@@ -22,7 +31,7 @@
         }
         public virtual void createHitbox()
         {
-            hitbox = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
+            hitbox = new Rectangle((int)pos.X, (int)pos.Y, (int)(texture.Width * GameManager.SCALE_FACTOR), (int)(texture.Height * GameManager.SCALE_FACTOR));
         }
         public virtual void updateHitbox()
         {

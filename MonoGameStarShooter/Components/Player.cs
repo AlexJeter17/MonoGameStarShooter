@@ -23,8 +23,7 @@ namespace MonoGameStarShooter
             pos = centerPos;
             base.texture = image;
             widthOfGame = width;
-            //playerPos = Game1.ScreenSize / 2;
-            sideSpeed = 5;
+            sideSpeed = 5 * GameManager.SCALE_FACTOR;
         }
 
 
@@ -37,25 +36,18 @@ namespace MonoGameStarShooter
                 if (pos.X > 0) {
                     pos.X -= sideSpeed;
                 }
-
-                
             }
             if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
             {
-
                 if (pos.X < widthOfGame - 128) {
                     pos.X += sideSpeed;
                 }
-
-                //pos.X += sideSpeed;
             }
             //Weapon Logic
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0)
             {
-
                 cooldownRemaining = fireRate;
                 EntityCollections.Instantiate(new Bullet(base.pos, SpriteArt.Bullet));
-
             }
             if (cooldownRemaining > 0) { cooldownRemaining--; }
         }

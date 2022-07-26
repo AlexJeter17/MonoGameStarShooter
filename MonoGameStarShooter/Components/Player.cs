@@ -9,7 +9,6 @@ namespace MonoGameStarShooter
     {
         //Initialize variables unique to player
         float sideSpeed;
-        public List<Bullet> bulletList = new List<Bullet>();
 
         //Firerate
         const int fireRate = 20;

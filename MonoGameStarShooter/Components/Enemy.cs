@@ -20,6 +20,13 @@ namespace MonoGameStarShooter
 
             pos.Y += dropSpeed;
             updateHitbox();
+            //Remove enemy after it leaves screen
+            if (pos.Y >= GameManager.screenHeight) 
+            { 
+                //Add logic for removing lives here
+                isActive = false;
+            
+            }
         }
 
 

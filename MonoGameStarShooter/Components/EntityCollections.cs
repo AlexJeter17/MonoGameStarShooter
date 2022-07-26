@@ -8,6 +8,8 @@
         //Entity specific lists
         public static List<Enemy> enemies = new List<Enemy>();
         static List<Bullet> bullets = new List<Bullet>();
+        public static int score = 0;
+        public static Player player1;
 
         static bool hasInitalized = false;
 
@@ -19,7 +21,8 @@
             {
                 screenW = sW;
                 screenH = sH;
-                Instantiate(new Player(new Vector2(screenW / 2, screenH / 1.2f), SpriteArt.Player, screenW));
+                player1 = new Player(new Vector2(screenW / 2, screenH / 1.2f), SpriteArt.Player, screenW);
+                Instantiate(player1);
                 hasInitalized = true;
             }
         }
@@ -49,6 +52,7 @@
                         Console.WriteLine("Hitbox");
                         enemies[i].isActive = false;
                         bullets[j].isActive = false;
+                        score++;
                     }
                 }
             }

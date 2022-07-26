@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 namespace MonoGameStarShooter
 {
     internal class Enemy : Entity
-    {
+   {
         protected int dropSpeed = 1;
         public int botOfScreen = Game1.height;
+
+        protected float dropSpeed = (1 * GameManager.SCALE_FACTOR);
+
         
         public Enemy(int width, Texture2D image)
         {
@@ -29,7 +32,16 @@ namespace MonoGameStarShooter
                 EntityCollections.player1.hp -= 1;
             }
 
+            //Remove enemy after it leaves screen
+            if (pos.Y >= GameManager.screenHeight) 
+            { 
+                //Add logic for removing lives here
+                isActive = false;
+            
+            }
+
         }
+
 
         public void hit() 
         {

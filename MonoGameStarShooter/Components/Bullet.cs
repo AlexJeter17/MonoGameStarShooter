@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MonoGameStarShooter
+﻿namespace MonoGameStarShooter
 {
     class Bullet : Entity
     {
@@ -26,9 +20,10 @@ namespace MonoGameStarShooter
 
             pos.Y -= BulletSpeed;
             updateHitbox();
-            if (pos.Y <= 0){ 
-            // Call the delete function
-            
+
+            //Remove object after it leaves the screen
+            if (pos.Y <= 0){
+                isActive = false;
             }
         
         }

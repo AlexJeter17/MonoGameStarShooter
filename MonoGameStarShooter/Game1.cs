@@ -14,7 +14,8 @@
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            _graphics.PreferredBackBufferHeight = 720;
+            _graphics.PreferredBackBufferHeight = GameManager.screenHeight;
+            _graphics.PreferredBackBufferWidth = GameManager.screenWidth;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             height = _graphics.PreferredBackBufferHeight;

@@ -12,7 +12,7 @@
 
         public static void Update()
         {
-            if (EntityCollections.enemies.Count == 0)
+            if (EntityCollections.enemies.Count == 0 && remainingEnemiesToSpawn == 0)
             {
                 InitializeWave();
             }

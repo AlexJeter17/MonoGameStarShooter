@@ -10,6 +10,8 @@ namespace MonoGameStarShooter
         //Initialize variables unique to player
         float sideSpeed;
 
+        public List<Bullet> bulletList = new List<Bullet>();
+        public int hp = 5;
         //Firerate
         const int fireRate = 20;
         int cooldownRemaining = 0;
@@ -29,6 +31,16 @@ namespace MonoGameStarShooter
         //Update method, takes in the abstract method from Entity
         public override void Update()
         {
+            // health check
+
+            if (hp <= 0) { 
+            
+                this.isActive = false;
+                // TODO::: Stop game here
+
+            }
+
+
             //Keyboard Logic
             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A)) 
             {

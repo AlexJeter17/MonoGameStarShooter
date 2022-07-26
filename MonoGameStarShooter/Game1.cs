@@ -6,20 +6,16 @@
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private SpriteFont font;
-        /*public static Player play;*/
-        public static int height, width;
-
-
-
+ 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _graphics.PreferredBackBufferHeight = 720;
             _graphics.PreferredBackBufferHeight = GameManager.screenHeight;
             _graphics.PreferredBackBufferWidth = GameManager.screenWidth;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            height = _graphics.PreferredBackBufferHeight;
-            width = _graphics.PreferredBackBufferWidth; 
+
         }
 
         protected override void Initialize()
@@ -52,10 +48,11 @@
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-            _spriteBatch.Draw(SpriteArt.backGround, new Rectangle(0, 0, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight), Color.White);
+            _spriteBatch.Draw(SpriteArt.backGround, new Rectangle(0, 0,GameManager.screenWidth,GameManager.screenHeight), Color.DarkGray); // If background does not perfectly fit screen, Edit it here
+
             EntityCollections.Draw(_spriteBatch);
             _spriteBatch.DrawString(font, "Score: " + EntityCollections.score, new Vector2(10, 10), Color.White);
-            _spriteBatch.DrawString(font, "Wave: " + WaveManager.wave, new Vector2(_graphics.PreferredBackBufferWidth - 200, 10), Color.White);
+            _spriteBatch.DrawString(font, "Wave: " + WaveManager.wave, new Vector2(GameManager.screenWidth - 200, 10), Color.White);
             _spriteBatch.DrawString(font, "HP: " + EntityCollections.player1.hp, new Vector2(400, 10), Color.White);
             _spriteBatch.End();
 
@@ -63,3 +60,5 @@
         }
     }
 }
+
+

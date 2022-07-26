@@ -8,8 +8,8 @@ namespace MonoGameStarShooter
 {
     internal class Enemy : Entity
    {
-        protected int dropSpeed = 1;
-        public int botOfScreen = Game1.height;
+        /*protected int dropSpeed = 1;*/
+        public int botOfScreen = GameManager.screenHeight;
 
         protected float dropSpeed = (1 * GameManager.SCALE_FACTOR);
 
@@ -36,6 +36,7 @@ namespace MonoGameStarShooter
             if (pos.Y >= GameManager.screenHeight) 
             { 
                 //Add logic for removing lives here
+
                 isActive = false;
             
             }

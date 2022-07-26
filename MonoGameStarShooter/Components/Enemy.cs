@@ -8,7 +8,7 @@ namespace MonoGameStarShooter
 {
     internal class Enemy : Entity
     {
-        protected int dropSpeed = 1;
+        protected float dropSpeed = (1 * GameManager.SCALE_FACTOR);
         
         public Enemy(int width, Texture2D image)
         {
@@ -21,6 +21,7 @@ namespace MonoGameStarShooter
             pos.Y += dropSpeed;
             updateHitbox();
         }
+
 
         public void hit() 
         {

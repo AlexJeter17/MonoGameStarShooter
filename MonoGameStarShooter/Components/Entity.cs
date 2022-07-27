@@ -2,6 +2,7 @@
 {
     abstract class Entity
     {
+        protected Color tint = Color.White;
         protected Texture2D texture;
         public Rectangle hitbox;
         public Vector2 pos;

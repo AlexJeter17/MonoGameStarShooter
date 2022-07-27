@@ -7,6 +7,7 @@
         public Rectangle hitbox;
         public Vector2 pos;
         public bool isActive = true;
+        public Color tint = Color.White;
 
         //Method must be implemented in derived class
         public abstract void Update();

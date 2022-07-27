@@ -13,11 +13,11 @@
         //Load the textures into the references from the Content mgcb editor
         public static void Load(ContentManager content)
         {
-            Player = content.Load<Texture2D>("Sprites/PlayerShip");
-            EnemyTypeOne = content.Load<Texture2D>("Sprites/EnemyStarship1Fix");
-            EnemyTypeTwo = content.Load<Texture2D>("Sprites/EnemyStarship2");
-            Bullet = content.Load<Texture2D>("Sprites/Bullet");
-            backGround = content.Load<Texture2D>("Sprites/StarBackGround2");
+            Player = content.Load<Texture2D>("PlayerShip");
+            EnemyTypeOne = content.Load<Texture2D>("EnemyTier1");
+            EnemyTypeTwo = content.Load<Texture2D>("EnemyTier2");
+            Bullet = content.Load<Texture2D>("Bullet");
+            backGround = content.Load<Texture2D>("StarBackground");
         }
 
         //Call the texture by using "SpriteArt.Name" ex "image = SpriteArt.Player" 

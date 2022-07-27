@@ -24,7 +24,7 @@ namespace MonoGameStarShooter
             pos = centerPos;
             base.texture = image;
             widthOfGame = width;
-            sideSpeed = 5 * GameManager.SCALE_FACTOR;
+            sideSpeed = 6 * GameManager.SCALE_FACTOR;
         }
 
 

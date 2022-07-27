@@ -22,12 +22,12 @@
                 if (remainingEnemiesToSpawn % 2 == 0)
                 {
                     remainingEnemiesToSpawn -= 1;
-                    EntityCollections.Instantiate(new Enemy(random.Next(128, (EntityCollections.screenW - 128)), SpriteArt.EnemyTypeOne));
+                    EntityCollections.Instantiate(new Enemy(random.Next(128, (EntityCollections.screenW - 128)), SpriteArt.EnemyTypeOne, 3f));
                 }
                 else
                 {
                     remainingEnemiesToSpawn -= 1;
-                    EntityCollections.Instantiate(new Enemy(random.Next(128, (EntityCollections.screenW - 128)), SpriteArt.EnemyTypeTwo));
+                    EntityCollections.Instantiate(new Enemy(random.Next(128, (EntityCollections.screenW - 128)), SpriteArt.EnemyTypeTwo, 8f));
                 }
                 spawnDelay = spawnRate;
 

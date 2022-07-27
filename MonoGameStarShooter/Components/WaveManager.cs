@@ -2,7 +2,7 @@
 {
     static class WaveManager
     {
-        public static int wave = 0;
+        public static int wave = -1;
         public static int remainingEnemiesToSpawn = 0;
         private static int maxNumEnemies = 0;
 

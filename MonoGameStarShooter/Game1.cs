@@ -34,7 +34,7 @@
 
         protected override void Update(GameTime gameTime)
         {
-            EntityCollections.Initialize(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+            EntityCollections.Initialize();
             EntityCollections.Update();
             WaveManager.Update();
             //awave = WaveManager.wave;

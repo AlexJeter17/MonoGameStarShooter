@@ -14,10 +14,10 @@
         public static void Load(ContentManager content)
         {
             Player = content.Load<Texture2D>("Sprites/PlayerShip");
-            EnemyTypeOne = content.Load<Texture2D>("Sprites/EnemyStarship1Fix");
-            EnemyTypeTwo = content.Load<Texture2D>("Sprites/EnemyStarship2");
+            EnemyTypeOne = content.Load<Texture2D>("Sprites/EnemyTier1");
+            EnemyTypeTwo = content.Load<Texture2D>("Sprites/EnemyTier2");
             Bullet = content.Load<Texture2D>("Sprites/Bullet");
-            backGround = content.Load<Texture2D>("Sprites/StarBackGround2");
+            backGround = content.Load<Texture2D>("Sprites/StarBackground");
         }
 
         //Call the texture by using "SpriteArt.Name" ex "image = SpriteArt.Player" 

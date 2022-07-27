@@ -20,7 +20,7 @@
 /processorParam:TextureFormat=Compressed
 /build:File.spritefont
 
-#begin Sprites/EnemyStarship1FIX.png
+#begin Sprites/Bullet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -30,9 +30,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/EnemyStarship1FIX.png
+/build:Sprites/Bullet.png
 
-#begin Sprites/New Piskel-1.png.png
+#begin Sprites/EnemyTier1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -42,9 +42,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/New Piskel-1.png.png;Sprites/EnemyStarship2.png
+/build:Sprites/EnemyTier1.png
 
-#begin Sprites/New_Piskel-1.png.png
+#begin Sprites/EnemyTier2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -54,19 +54,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/New_Piskel-1.png.png;Sprites/EnemyStarship2.png
-
-#begin Sprites/New_Piskel-1.png2.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/New_Piskel-1.png2.png;Sprites/Bullet.png
+/build:Sprites/EnemyTier2.png
 
 #begin Sprites/PlayerShip.png
 /importer:TextureImporter
@@ -80,7 +68,7 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/PlayerShip.png
 
-#begin Sprites/StarBackground.png
+#begin Sprites/StarBackground.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -90,17 +78,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/StarBackground.png
-
-#begin Sprites/StarBackground2.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/StarBackground2.png
+/build:Sprites/StarBackground.jpg
 

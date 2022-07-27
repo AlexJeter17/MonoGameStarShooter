@@ -11,10 +11,6 @@
             createHitbox();
         }
 
-        public void hit() {
-            hp -= 1;
-        }
-
         public override void Update() {
 
             pos.Y -= GameManager.bulletSpeed * GameManager.SCALE_FACTOR;

@@ -2,7 +2,6 @@
 {
     class Bullet : Entity
     {
-        protected int hp;
         public int BulletSpeed = 8;
 
         public Bullet(Vector2 xy, Texture2D image) {
@@ -10,10 +9,6 @@
             pos = xy;
             pos.X += 47;
             createHitbox();
-        }
-
-        public void hit() {
-            hp -= 1;
         }
 
         public override void Update() {

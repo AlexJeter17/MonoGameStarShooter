@@ -50,6 +50,9 @@
                     {
                         //Do hitbox stuff here
                         Console.WriteLine("Hitbox");
+
+                        // enemies[i].tint = Color.Red;
+
                         enemies[i].isActive = false;
                         bullets[j].isActive = false;
                         score++;

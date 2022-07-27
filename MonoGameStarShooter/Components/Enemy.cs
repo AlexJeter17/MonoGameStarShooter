@@ -8,16 +8,17 @@ namespace MonoGameStarShooter
 {
     internal class Enemy : Entity
    {
-        /*protected int dropSpeed = 1;*/
+        
         public int botOfScreen = GameManager.screenHeight;
-
-        protected float dropSpeed = (1 * GameManager.SCALE_FACTOR);
+        protected float dropSpeed;
 
         
-        public Enemy(int width, Texture2D image)
+        public Enemy(int width, Texture2D image, float newSpeed)
         {
+            dropSpeed = newSpeed;
             base.texture = image;
             base.pos = new Vector2(width, 0);
+            dropSpeed = (dropSpeed * GameManager.SCALE_FACTOR);
             createHitbox();
            
         }
@@ -43,10 +44,5 @@ namespace MonoGameStarShooter
 
         }
 
-
-        public void hit() 
-        {
-            //hp -= 1;
-        }
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace MonoGameStarShooter
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+namespace MonoGameStarShooter
 {
     abstract class Entity
     {
@@ -16,15 +19,15 @@
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(
-                texture, 
-                pos, 
-                null,
-                tint,
-                0f,
-                Vector2.Zero,
-                GameManager.SCALE_FACTOR,
-                SpriteEffects.None,
-                0f);
+                texture,                        //Texture
+                pos,                            //Position
+                null,                           //What portion of the sprite to draw (Default Draws whole sprite)
+                tint,                           //Tint Color
+                0f,                             //Rotation
+                Vector2.Zero,                   //Origin
+                GameManager.SCALE_FACTOR,       //Scale
+                SpriteEffects.None,             //Effects
+                0f);                            //Z-Layer
         }
         public virtual void loadImage(Texture2D image)
         {

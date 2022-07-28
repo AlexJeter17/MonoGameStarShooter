@@ -1,4 +1,7 @@
-﻿namespace MonoGameStarShooter
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+namespace MonoGameStarShooter
 {
     class Bullet : Entity
     {

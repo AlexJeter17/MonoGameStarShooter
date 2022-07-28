@@ -1,8 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
@@ -26,7 +23,6 @@ namespace MonoGameStarShooter
             pos = centerPos;
             base.texture = image;
             sideSpeed = GameManager.playerSpeed * GameManager.SCALE_FACTOR;
-            widthOfGame = width;
         }
 
 
@@ -37,7 +33,6 @@ namespace MonoGameStarShooter
             if (hp <= 0) { 
             
                 this.isActive = false;
-                // TODO::: Stop game here
 
             }
             //Keyboard Logic

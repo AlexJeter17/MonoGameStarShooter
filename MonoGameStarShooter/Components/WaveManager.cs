@@ -1,4 +1,6 @@
-﻿namespace MonoGameStarShooter
+﻿using System;
+
+namespace MonoGameStarShooter
 {
     static class WaveManager
     {

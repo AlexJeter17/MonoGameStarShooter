@@ -41,6 +41,7 @@ namespace MonoGameStarShooter
             OnHitEffect();
             updateHitbox();
         }
+
         public void OnHit() 
         {
             health -= 1;

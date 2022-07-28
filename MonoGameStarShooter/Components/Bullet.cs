@@ -6,7 +6,7 @@ namespace MonoGameStarShooter
     class Bullet : Entity
     {
         protected int hp;
-
+        
         public Bullet(Vector2 xy, Texture2D image) {
             base.texture = image;   
             pos = xy;

@@ -17,7 +17,7 @@ Right click the image, then click **Save as Image**. Make sure to save it as a P
 
 
 
-Make sure to add these images into your Content mgcb editor of your project. 
+Make sure to add these images into your Content mgcb editor of your project. If you don't know how to add content, see this article [Adding Content](https://docs.monogame.net/articles/getting_started/4_adding_content.html)
 
 ## Creating a new Class to contain your Sprites
 In the [Adding Content](https://docs.monogame.net/articles/getting_started/4_adding_content.html) you learned how to add a sprite using the MGCB editor and render it into MonoGame. However it does come with the flaw when you start building a large game, and that multiple sprites are required and loading them all in code, one line at a time inside our LoadContent function is too tedious and messy

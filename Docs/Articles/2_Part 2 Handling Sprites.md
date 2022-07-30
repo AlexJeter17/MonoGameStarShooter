@@ -7,13 +7,13 @@ Before you start, download these images as a PNG as it will be part of the game 
 
 Right click the image, then click **Save as Image**. Make sure to save it as a PNG. Alternatively, you can download the whole assets folder from the github [here](https://github.com/AlexJeter17/MonoGameStarShooter/tree/main/Docs/Sprites).
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Sprites/PlayerShip.png) PlayerShip 
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/PlayerShip.png) PlayerShip 
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Sprites/EnemyTier1.png) EnemyTier1
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/EnemyTier1.png) EnemyTier1
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Sprites/EnemyTier2.png) EnemyTier2
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/EnemyTier2.png) EnemyTier2
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Sprites/Bullet.png) Bullet
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/Bullet.png) Bullet
 
 
 
@@ -27,7 +27,7 @@ Instead of loading our textures inside of Game1.cs, we can load these onto a sep
 ### Setup
 Create a new class file inside your Components folder, just like how you setup the GameManager class in the last part. Your components folder should look like this:
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Content/2_FolderSprite.png)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/2_FolderSprite.png)
 
 
 Click on the new SpriteArt class we just created in our Components folder. This should open up the .cs file for you to edit.
@@ -134,9 +134,9 @@ You can now draw any of the images that was loaded into Game1.cs. Using the Play
 
 Now when you run the game, you should see the Player image on the top left screen.
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Content/2_PlayerSprite.png)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/2_PlayerSprite.png)
 
-Once you are finished, you can go over to the next section where you create the fundamental code for all the objects in the game: [Part 3: Creating an Entity class](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md)
+Once you are finished, you can go over to the next section where you create the fundamental code for all the objects in the game: [Part 3: Creating an Entity class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md)
 
 
 ## Additional Resources

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonoGameStarShooter
 {
-    internal class Enemy : Entity
+    class Enemy : Entity
    {
         
         public int botOfScreen = GameManager.screenHeight;

@@ -1,4 +1,7 @@
-﻿namespace MonoGameStarShooter
+﻿using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
+
+namespace MonoGameStarShooter
 {
     static class SpriteArt
     {
@@ -13,11 +16,11 @@
         //Load the textures into the references from the Content mgcb editor
         public static void Load(ContentManager content)
         {
-            Player = content.Load<Texture2D>("PlayerShip");
-            EnemyTypeOne = content.Load<Texture2D>("EnemyTier1");
-            EnemyTypeTwo = content.Load<Texture2D>("EnemyTier2");
-            Bullet = content.Load<Texture2D>("Bullet");
-            backGround = content.Load<Texture2D>("StarBackground");
+            Player = content.Load<Texture2D>("Sprites/PlayerShip");
+            EnemyTypeOne = content.Load<Texture2D>("Sprites/EnemyTier1");
+            EnemyTypeTwo = content.Load<Texture2D>("Sprites/EnemyTier2");
+            Bullet = content.Load<Texture2D>("Sprites/Bullet");
+            backGround = content.Load<Texture2D>("Sprites/StarBackground");
         }
 
         //Call the texture by using "SpriteArt.Name" ex "image = SpriteArt.Player" 

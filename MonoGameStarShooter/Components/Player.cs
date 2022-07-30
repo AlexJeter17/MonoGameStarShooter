@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
+using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace MonoGameStarShooter
 {
@@ -11,53 +12,48 @@ namespace MonoGameStarShooter
         float sideSpeed;
 
         public List<Bullet> bulletList = new List<Bullet>();
-        public int hp = 5;
-        //Firerate
-        const int fireRate = 20;
+        public int hp = GameManager.playerHealth;
+
         int cooldownRemaining = 0;
-        int widthOfGame;
 
         //Constructor
-        public Player(Vector2 centerPos, Texture2D image, int width)
+        public Player(Vector2 centerPos, Texture2D image)
         {
             //Center Player to screen width, and position 
             pos = centerPos;
             base.texture = image;
-            widthOfGame = width;
-            sideSpeed = 6 * GameManager.SCALE_FACTOR;
+            sideSpeed = GameManager.playerSpeed * GameManager.SCALE_FACTOR;
         }
 
 
         //Update method, takes in the abstract method from Entity
         public override void Update()
         {
-            // health check
-
+            //Health check
             if (hp <= 0) { 
             
                 this.isActive = false;
-                // TODO::: Stop game here
 
             }
-
-
             //Keyboard Logic
+            //Left movement
             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A)) 
             {
                 if (pos.X > 0) {
                     pos.X -= sideSpeed;
                 }
             }
+            //Right movement
             if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                if (pos.X < widthOfGame - 128) {
+                if (pos.X < GameManager.screenWidth - 128) {
                     pos.X += sideSpeed;
                 }
             }
-            //Weapon Logic
+            //Shooting Logic
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0)
             {
-                cooldownRemaining = fireRate;
+                cooldownRemaining = GameManager.fireRate;
                 EntityCollections.Instantiate(new Bullet(base.pos, SpriteArt.Bullet));
             }
             if (cooldownRemaining > 0) { cooldownRemaining--; }

@@ -10,7 +10,7 @@ This tutorial will cover the following topics:
 
 At the end of this tutorial series you will have a working MonoGame project that you can share with your friends.
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Content/0_StarShooterDemo1.gif)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/0_StarShooterDemo1.gif)
 
 
 ## Getting Started
@@ -20,7 +20,7 @@ This tutorial will be using Visual Studio 2022 for some references, but any deve
 
 Create a new project using the MonoGame Cross-Platform Desktop Application templates:
 
-![](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Content/0_TemplatesSetup.png)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/0_TemplatesSetup.png)
 
 
-Once you have an empty project ready to go, move on to the next part: [Part 1: Creating the GameManager Class](https://github.com/Forged1212/MonoGameStarShooter/blob/develop/Docs/Articles/1_Part%201%20Creating%20the%20GameManager%20class.md)
+Once you have an empty project ready to go, move on to the next part: [Part 1: Creating the GameManager Class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/1_Part%201%20Creating%20the%20GameManager%20class.md)

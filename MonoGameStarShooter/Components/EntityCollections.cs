@@ -79,5 +79,19 @@ namespace MonoGameStarShooter
             if (entity is Enemy) enemies.Add(entity as Enemy);
             else if (entity is Bullet) bullets.Add(entity as Bullet);
         }
+
+        //Possibly add a new method here to delete all enemies Clear all except player
+        public static void ClearEntities() 
+        {
+
+            for (int i = 0; i < entities.Count; i++) 
+            {
+                if (entities[i] is Enemy || entities[i] is Bullet) {
+                    entities[i].isActive = false;
+                }
+            }
+            enemies.Clear();
+            bullets.Clear();
+        }
     }
 }

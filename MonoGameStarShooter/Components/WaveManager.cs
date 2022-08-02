@@ -58,7 +58,7 @@ namespace MonoGameStarShooter
         {
             wave = 0;
             remainingEnemiesToSpawn = 0;
-            maxNumEnemies = 0;
+            maxNumEnemies = 2;
         }
         
     }

@@ -30,28 +30,31 @@ namespace MonoGameStarShooter
         public override void Update()
         {
             //Health check
-            if (hp <= 0) { 
-            
-                this.isActive = false;
-
+            if (hp <= 0)
+            {
+                GameManager.inGame = false;
+                /*this.isActive = false;*/
+                hp = GameManager.playerHealth;
+                
             }
+
             //Keyboard Logic
             //Left movement
-            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A)) 
+            if ((Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A)) && GameManager.inGame) 
             {
                 if (pos.X > 0) {
                     pos.X -= sideSpeed;
                 }
             }
             //Right movement
-            if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
+            if ((Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D)) && GameManager.inGame)
             {
                 if (pos.X < GameManager.screenWidth - 128) {
                     pos.X += sideSpeed;
                 }
             }
             //Shooting Logic
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0 && GameManager.inGame)
             {
                 cooldownRemaining = GameManager.fireRate;
                 EntityCollections.Instantiate(new Bullet(base.pos, SpriteArt.Bullet));

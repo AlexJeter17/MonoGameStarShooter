@@ -29,10 +29,6 @@ namespace MonoGameStarShooter
                 SpriteEffects.None,             //Effects
                 0f);                            //Z-Layer
         }
-        public virtual void loadImage(Texture2D image)
-        {
-            texture = image;
-        }
         public virtual void createHitbox()
         {
             hitbox = new Rectangle((int)pos.X, (int)pos.Y, (int)(texture.Width * GameManager.SCALE_FACTOR), (int)(texture.Height * GameManager.SCALE_FACTOR));

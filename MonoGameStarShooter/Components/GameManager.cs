@@ -47,5 +47,7 @@
 
         /* Misc Options */
         public static float bulletSpeed = 16f;
+        public static bool inGame = false;
+
     }
 }

@@ -13,10 +13,10 @@ namespace MonoGameStarShooter
         static List<Entity> entities = new List<Entity>();
 
         //Entity specific lists and Player 
+        public static Player player1;
         public static List<Enemy> enemies = new List<Enemy>();
         static List<Bullet> bullets = new List<Bullet>();
-        public static Player player1;
-
+        
         //Score counter
         public static int score = 0;
         
@@ -28,7 +28,7 @@ namespace MonoGameStarShooter
         {
             if (hasInitalized == false)
             {
-                player1 = new Player(new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight / 1.2f), SpriteArt.Player);
+                player1 = new Player(new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight - 200), SpriteArt.Player);
                 Instantiate(player1);
                 hasInitalized = true;
             }

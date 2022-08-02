@@ -1,4 +1,6 @@
-﻿
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace MonoGameStarShooter
 {
@@ -62,23 +64,19 @@ namespace MonoGameStarShooter
             {
                 GraphicsDevice.Clear(Color.CornflowerBlue);
 
-                // TODO: Add your drawing code here
-                
-                _spriteBatch.Draw(SpriteArt.backGround, new Rectangle(0, 0, GameManager.screenWidth, GameManager.screenHeight), Color.WhiteSmoke); // If background does not perfectly fit screen, Edit it here
+                UserInterface.gameScreen(_spriteBatch, font);
 
-                EntityCollections.Draw(_spriteBatch);
-                _spriteBatch.DrawString(font, "Score: " + EntityCollections.score, new Vector2(10, 10), Color.White);
-                _spriteBatch.DrawString(font, "Wave: " + WaveManager.wave, new Vector2(GameManager.screenWidth - 200, 10), Color.White);
-                _spriteBatch.DrawString(font, "HP: " + EntityCollections.player1.hp, new Vector2(400, 10), Color.White);
-                
-
-                base.Draw(gameTime);
             }
             else
             {
-                GameManager.Interface1(_spriteBatch, font); 
+
+                UserInterface.HomeScreen(_spriteBatch, font);
+                
             }
+            EntityCollections.Draw(_spriteBatch);
             _spriteBatch.End();
+
+            base.Draw(gameTime);
         }
 
 

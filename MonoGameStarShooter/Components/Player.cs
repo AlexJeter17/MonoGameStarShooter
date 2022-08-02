@@ -11,7 +11,6 @@ namespace MonoGameStarShooter
         //Initialize variables unique to player
         float sideSpeed;
 
-        public List<Bullet> bulletList = new List<Bullet>();
         public int hp = GameManager.playerHealth;
 
         int cooldownRemaining = 0;
@@ -21,7 +20,7 @@ namespace MonoGameStarShooter
         {
             //Center Player to screen width, and position 
             pos = centerPos;
-            base.texture = image;
+            texture = image;
             sideSpeed = GameManager.playerSpeed * GameManager.SCALE_FACTOR;
         }
 
@@ -56,8 +55,9 @@ namespace MonoGameStarShooter
             //Shooting Logic
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0 && GameManager.inGame)
             {
+                Vector2 projectile = new Vector2 (pos.X + ((texture.Width * GameManager.SCALE_FACTOR)/2), pos.Y);
                 cooldownRemaining = GameManager.fireRate;
-                EntityCollections.Instantiate(new Bullet(base.pos, SpriteArt.Bullet));
+                EntityCollections.Instantiate(new Bullet(projectile, SpriteArt.Bullet));
             }
             if (cooldownRemaining > 0) { cooldownRemaining--; }
         }

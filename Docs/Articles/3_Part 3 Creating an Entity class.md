@@ -59,7 +59,7 @@ The Player, Enemy, and Bullet entities also need a way to be drawn onto the game
                 Color.White,                  
                 0f,                           
                 Vector2.Zero,                 
-                GameManager.SCALE_FACTOR,     //Scale
+                GameManager.SCALE,     //Scale
                 SpriteEffects.None,           
                 0f);    
     }  

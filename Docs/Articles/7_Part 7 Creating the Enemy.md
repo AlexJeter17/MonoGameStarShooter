@@ -149,6 +149,6 @@ public static void Initialize()
 
 Now when you run the game you should have both the player and enemy on screen shown below:
 
-![](https://i.imgur.com/J924Nss.gif)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/7_EnemyDemo.gif)
 
-In the next section, you will create interactive collisions between the bullet and enemy: [Part 8: Collisions!](https://hackmd.io/@Qw7rsJtWT3ih1LbsTwq8XA/SkKIFTFnq)
+In the next section, you will create interactive collisions between the bullet and enemy: [Part 8: Collisions!]()

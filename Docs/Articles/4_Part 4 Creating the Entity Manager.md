@@ -96,4 +96,4 @@ When you run your game, nothing should happen. We haven't added any entities to 
 
 ## Moving On
 
-Now lets go to the next article which is [Part 5: Creating the Player Class]()
+Now lets go to the next article which is [Part 5: Creating the Player Class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/5_Part%205%20Creating%20the%20Player.md)

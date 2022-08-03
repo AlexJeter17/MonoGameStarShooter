@@ -130,7 +130,7 @@ Now lets place this method into the Game1.cs file. Look for the Update method an
 ...
 ```
 Run your game, and you should be able to see the player and be able to control it:
-![](https://i.imgur.com/ybGFiiX.gif)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/5_Player.gif)
 
 ## GameManager Settings
 A small addition you can make is to give the player properties to the GameManager so that you have one file that controls all the properties. You will be able to change these on a whim without having to go through the files.
@@ -150,4 +150,4 @@ int sideSpeed = GameManager.playerSpeed;
 
 
 
-To see how to make the bullet class follow this link: [Part 6: Shooting!](https://hackmd.io/Fe-Q3ielSDSlgMNU65VS7g)
+To see how to make the bullet class follow this link: [Part 6: Shooting!](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/6_Part%206%20Bullets%20and%20Shooting.md)

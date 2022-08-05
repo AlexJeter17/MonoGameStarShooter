@@ -42,8 +42,8 @@ namespace SpaceShooterDemo
         //Constructor
         public Player(Texture2D image, Vector2 initalPosition) 
         {
-            texture = image
-            pos = initalPosition
+            texture = image;
+            pos = initalPosition;
         }
     }
 }

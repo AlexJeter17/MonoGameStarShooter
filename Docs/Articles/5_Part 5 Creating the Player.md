@@ -23,6 +23,9 @@ namespace SpaceShooterDemo
 >In Part 3: Creating the Entity, you created the **abstract** class. By using inheritence you are able to gain the methods and variables from the Entity class in order to utilize them in the Player class. Using the code above, the player now contains the position, texture, and the other methods from Entity.
 
 
+>NOTE: Player will be red underlined, please continue with the article as we will resolve it in 2 steps!
+
+
 ## Keyboard Controls
 
 Lets create a new variable that controls the side by side speed of the player and the constructor.

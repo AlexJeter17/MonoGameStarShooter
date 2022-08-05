@@ -94,7 +94,7 @@ Now that you have prepared the player class, you will spawn in the player using 
 To start, go back to the EntityManager class and implement the following:
 ```csharp
 //EntityManager
-static class EntityCollections
+static class EntityManager
 {
     //From Part 4
     static List<Entity> entities = new List<Entity>();

@@ -130,7 +130,7 @@ Now navigate to the Update method, and below the keyboard controls implement the
     //Shooting Logic
     if (Keyboard.GetState().IsKeyDown(Keys.Space) && cooldownRemaining <= 0)
     {
-        Vector2 projectileSpawn = new Vector2 (pos.X + ((texture.Width * GameManager.SCALE_FACTOR)/2), pos.Y);
+        Vector2 projectileSpawn = new Vector2 (pos.X + ((texture.Width * GameManager.SCALE)/2), pos.Y);
         cooldownRemaining = fireRate;
         EntityManager.Instantiate(new Bullet(projectileSpawn, SpriteArt.Bullet));
     }

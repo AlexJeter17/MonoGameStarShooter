@@ -1,5 +1,5 @@
 # Part 5: Creating the Player
-In this section you will be using the Entity class from the previous section in [Part 4: Creating the Entity class](https://hackmd.io/QIY6vkb8QayRSpkG6Hr9OQ) to create the Player class, implement keyboard player movement, and initilize the player in the Game Class.
+In this section you will be using the Entity class from the previous section in [Part 3: Creating the Entity class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md) to create the Player class, implement keyboard player movement, and initilize the player in the Game Class.
 
 ## Create a new class file
 Just like how you created the files for Entity and SpriteArt, under the Componenets folder add a new class and name it "Player"

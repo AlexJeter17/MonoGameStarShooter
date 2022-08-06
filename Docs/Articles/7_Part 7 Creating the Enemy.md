@@ -150,4 +150,4 @@ Now when you run the game you should have both the player and enemy on screen sh
 
 ![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/7_EnemyDemo.gif)
 
-In the next section, you will create interactive collisions between the bullet and enemy: [Part 8: Collisions!]()
+In the next section, you will create interactive collisions between the bullet and enemy: [Part 8: Collisions and Interactions](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/8_Part%208%20Collisions%20and%20Interactions.md)

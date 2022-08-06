@@ -277,4 +277,4 @@ Now when you run the game and hit the enemy you should see a knockback effect an
 
 ## Next Steps
 
-Once you are finished, the next part will go over infinitely spawning enemies: [Part 9: Wave Spawning](https://hackmd.io/@Qw7rsJtWT3ih1LbsTwq8XA/SkVZSRWT9)
+Once you are finished, the next part will go over infinitely spawning enemies: [Part 9: Wave Spawning](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/9_Part%209%20Wave%20Manager%20Class.md)

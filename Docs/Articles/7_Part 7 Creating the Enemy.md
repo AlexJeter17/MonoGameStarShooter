@@ -129,21 +129,21 @@ To make sure the enemy class and entity manager are working together add the fol
 ```csharp
 //EntityManager.cs
 public static void Initialize()
-        {
-            if (hasInitalized == false)
-            {
-                player1 = new Player(new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight - 200), SpriteArt.Player);
-                Instantiate(player1);
-                //Manually Instantiate a new Enemy on startup
-                Instantiate(new Enemy(
-                    GameManager.screenWidth / 2, //Spawn at the top center
-                    SpriteArt.Enemy1,            //Use the Enemy1 sprite from SpriteArt
-                    3f,                          //Set the new speed of Enemy to 3
-                    2                            //Health points of the Enemy
-                ));
-                hasInitalized = true;
-            }
-        }
+{
+    if (hasInitalized == false)
+    {
+        player1 = new Player(new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight - 200), SpriteArt.Player);
+        Instantiate(player1);
+        //Manually Instantiate a new Enemy on startup
+        Instantiate(new Enemy(
+        GameManager.screenWidth / 2, //Spawn at the top center
+        SpriteArt.Enemy1,            //Use the Enemy1 sprite from SpriteArt
+        3f,                          //Set the new speed of Enemy to 3
+        2                            //Health points of the Enemy
+        ));
+        hasInitalized = true;
+    }
+}
 ```
 
 Now when you run the game you should have both the player and enemy on screen shown below:

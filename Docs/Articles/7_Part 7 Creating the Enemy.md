@@ -116,7 +116,6 @@ Now that the Entity Manager can check the list, you need to make sure new Enemie
 //EntityManager.cs
 public static void Instantiate(Entity entity) 
 {
-        ...
         entities.Add(entity);
         if (entity is Bullet) bullets.Add(entity as Bullet);
         else if (entity is Enemy) enemies.Add(entity as Enemy);

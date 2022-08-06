@@ -94,9 +94,7 @@ Navigate to the Entity Manager class again and from the top where all the lists 
         static List<Entity> entities = new List<Entity>();
         static List<Bullet> bullets = new List<Bullet>();
         //The enemy list to add
-        public static List<Enemy> enemies = new List<Enemy>();
-        
-        public static Player player1;    
+        public static List<Enemy> enemies = new List<Enemy>();   
 ...
 ```
 

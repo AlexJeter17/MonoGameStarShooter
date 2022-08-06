@@ -101,6 +101,7 @@ public static void Update()
     //If any entities have isActive set to false, remove them from the lists
     entities = entities.Where(obj => obj.isActive).ToList();
     bullets = bullets.Where(obj => obj.isActive).ToList();
+}
 ```
 The logic here checks if any of the entities isActive is true, then keep them in the list. If they are set to false remove them from the list, thus they will also be removed from the game when isActive is set to false.
 

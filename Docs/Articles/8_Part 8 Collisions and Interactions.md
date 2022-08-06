@@ -228,7 +228,7 @@ public void OnHit()
 ```
 Here the on hit method will remove one health from the enemy, set hit cooldown to hit frames which will go over in the next method, and apply a knockback effect to the Enemy.
 
-You need to do a minor change in EntityManager and replace the health subtraction inside of the collision logic:
+You need to do a minor change in EntityManager Update() method and replace the health subtraction inside of the collision logic:
 
 ```csharp
 //EntityManager.cs

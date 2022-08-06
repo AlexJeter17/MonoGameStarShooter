@@ -19,6 +19,7 @@ Right click the image, then click **Save as Image**. Make sure to save it as a P
 ![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/EnemyTier2.png) EnemyTier2
 
 ![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/Bullet.png) Bullet
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/StarBackground.jpg) Star Background
 
 
 
@@ -95,6 +96,7 @@ You can load the rest of the assets you downloaded here. Make sure that you have
     public static Texture2D Enemy1 { get; private set; }
     public static Texture2D Enemy2 { get; private set; }
     public static Texture2D Bullet { get; private set; }
+    public static Texture2D background { get; private set; }
     
     //Function to load our content
     public static void Load(ContentManager content)
@@ -103,6 +105,7 @@ You can load the rest of the assets you downloaded here. Make sure that you have
         Enemy1 = content.Load<Texture2D>("EnemyTier1");
         Enemy2 = content.Load<Texture2D>("EnemyTier1");
         Bullet = content.Load<Texture2D>("Bullet");
+        background = content.Load<Texture2D>("StarBackground");
     }
 ```
 

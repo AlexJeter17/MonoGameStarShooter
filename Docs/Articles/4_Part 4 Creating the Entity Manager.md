@@ -16,6 +16,8 @@ To start, create another class file inside the Componenets folder. Name this cla
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace StarShooterDemo
 {

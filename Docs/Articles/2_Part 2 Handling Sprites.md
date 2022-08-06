@@ -19,7 +19,8 @@ Right click the image, then click **Save as Image**. Make sure to save it as a P
 ![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/EnemyTier2.png) EnemyTier2
 
 ![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/Bullet.png) Bullet
-![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/StarBackground.jpg) Star Background
+
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/StarBackground.jpg) StarBackground
 
 
 

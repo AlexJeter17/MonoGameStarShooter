@@ -18,6 +18,8 @@ namespace StarShooterDemo
     }
 }
 ```
+> Same error as before with Player and Bullet, if there is an underline, it will be fixed in the next steps.
+
 Here there are two variables, one to determine the health of the enemy and one that controls the move speed of the enemy.
 
 Health and the functionality will be discussed in the collisions section.

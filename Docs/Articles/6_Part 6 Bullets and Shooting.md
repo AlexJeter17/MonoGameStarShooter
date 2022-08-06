@@ -18,6 +18,8 @@ namespace SpaceShooterDemo
     }
 }
 ```
+> Same error will occur that happened with player, it will be fixed in the next few steps.
+
 
 The variable BulletSpeed will control how fast the bullet will travel. We set it to 8 but you can set this number to fit your needs
 

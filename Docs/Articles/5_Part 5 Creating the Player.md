@@ -107,7 +107,7 @@ static class EntityManager
     {
         if (hasInitialized == false)
         {
-            player = new Player(new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight / 1.2f), SpriteArt.Player);
+            player = new Player(SpriteArt.Player, new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight / 1.2f));
             Instantiate(player);
             hasInitialized = true;
         }

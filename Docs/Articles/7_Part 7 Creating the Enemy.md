@@ -130,10 +130,10 @@ To make sure the enemy class and entity manager are working together add the fol
 //EntityManager.cs
 public static void Initialize()
 {
-    if (hasInitalized == false)
+    if (hasInitialized == false)
     {
-        player1 = new Player(new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight - 200), SpriteArt.Player);
-        Instantiate(player1);
+        player = new Player(SpriteArt.Player, new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight - 200));
+        Instantiate(player);
         //Manually Instantiate a new Enemy on startup
         Instantiate(new Enemy(
         GameManager.screenWidth / 2, //Spawn at the top center
@@ -141,7 +141,7 @@ public static void Initialize()
         3f,                          //Set the new speed of Enemy to 3
         2                            //Health points of the Enemy
         ));
-        hasInitalized = true;
+        hasInitialized = true;
     }
 }
 ```

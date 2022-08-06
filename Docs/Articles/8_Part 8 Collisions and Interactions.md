@@ -169,7 +169,7 @@ To start, go to the Enemy class, and on the lines containing the variables for h
 class Enemy : Entity 
 {
     public int health = 2;
-    protected float dropSpeed = (1 * GameManager.SCALE_FACTOR);
+    protected float dropSpeed = (1 * GameManager.SCALE);
     
     //Variables to control hit effects
     protected Color tint = Color.White;

@@ -34,6 +34,8 @@ namespace MonoGameStarShooter
                 GameManager.inGame = false;
                 /*this.isActive = false;*/
                 hp = GameManager.playerHealth;
+
+
                 
             }
 

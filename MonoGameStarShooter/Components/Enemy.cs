@@ -2,12 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGameStarShooter
-
-
-    class Enemy : Entity
-   {
-        
-        
+{     
 
     internal class Enemy : Entity
     {
@@ -70,3 +65,4 @@ namespace MonoGameStarShooter
         }
     }
 }
+    

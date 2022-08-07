@@ -79,9 +79,6 @@ namespace MonoGameStarShooter
             base.Draw(gameTime);
         }
 
-
-
-
     }
 }
 

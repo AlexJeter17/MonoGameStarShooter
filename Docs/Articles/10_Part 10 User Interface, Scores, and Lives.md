@@ -188,13 +188,13 @@ namespace StarShooterDemo
     static class UserInterface
     {
         public static bool hasStarted = false;
-        private static string titleString = "MonoGame Star Shooter Tutorial!";
+        private static string titleString = "My First Game!";
     }
 }
 ```
 `public static bool hasStarted = false` is the variable that controls the one time initialization for the titleString content. It is similar to the variable for initalizing the player in the EntityManager class.
 
-`private static string titleString = "My First Game1"` is a string that will be displayed as the header when starting the game and when a game over occurs. The string will later be modified to display the score at the end of a game.
+`private static string titleString = "My First Game!"` is a string that will be displayed as the header when starting the game and when a game over occurs. The string will later be modified to display the score at the end of a game.
 
 ### Creating the Home Screen
 

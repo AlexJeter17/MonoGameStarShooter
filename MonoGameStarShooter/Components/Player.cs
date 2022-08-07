@@ -11,7 +11,7 @@ namespace MonoGameStarShooter
         int sideSpeed = GameManager.playerSpeed;
 
         int cooldownRemaining = 0;
-        int fireRate = 10;
+        int fireRate = 15;
 
         public int hp = GameManager.playerHealth;
 
@@ -32,9 +32,9 @@ namespace MonoGameStarShooter
             if (hp <= 0)
             {
                 GameManager.inGame = false;
-                GameManager.gameOver.Play(0.5f, 0.0f, 0.0f);
+                SpriteArt.gameOver.Play(0.5f, 0.0f, 0.0f);
                 hp = GameManager.playerHealth;
-                MediaPlayer.Play(GameManager.song);
+                MediaPlayer.Play(SpriteArt.song);
             }
 
             //Keyboard Controls
@@ -65,7 +65,7 @@ namespace MonoGameStarShooter
                 cooldownRemaining = fireRate;
                 EntityCollections.Instantiate(new Bullet(projectileSpawn, SpriteArt.Bullet));
 
-                GameManager.shootSound.Play(0.25f, 0.0f, 0.0f);
+                SpriteArt.shootSound.Play(0.25f, 0.0f, 0.0f);
 
             }
             if (cooldownRemaining > 0)

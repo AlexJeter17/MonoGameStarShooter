@@ -10,7 +10,7 @@ namespace MonoGameStarShooter
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private SpriteFont font;
+        
 
         public Game1()
         {
@@ -25,27 +25,16 @@ namespace MonoGameStarShooter
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
-            // 0.0f is silent, 1.0f is full volume
-
         }
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            //Load the SpriteArt file, which will load all the Sprites inside it
-            //using the method you created in that file
-            font = Content.Load<SpriteFont>("File");
-            GameManager.song = Content.Load<Song>("11_FreeSpaceMusic");
-            GameManager.explosion = Content.Load<SoundEffect>("11_Explosion");
-            GameManager.shootSound = Content.Load<SoundEffect>("11_ShootingNoise");
-            GameManager.gameOver = Content.Load<SoundEffect>("11_GameOver");
-            GameManager.hpDown = Content.Load<SoundEffect>("11_HealthDrop");
-            MediaPlayer.IsRepeating = true;
-            MediaPlayer.Play(GameManager.song);
-            MediaPlayer.Volume = .5f;
             SpriteArt.Load(Content);
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(SpriteArt.song);
+            MediaPlayer.Volume = .5f;
+            
         }
 
         protected override void Update(GameTime gameTime)
@@ -61,33 +50,32 @@ namespace MonoGameStarShooter
             }
             if (GameManager.inGame) // Here we check to make sure inGame is true
             {
+                UserInterface.hasStarted = true;
                 EntityCollections.Initialize();
                 EntityCollections.Update();
                 WaveManager.Update();
-                base.Update(gameTime);
             }
-
+            base.Update(gameTime);
         }
+
+        
+
         protected override void Draw(GameTime gameTime)
         {
             _spriteBatch.Begin();
-
-            _spriteBatch.Draw(SpriteArt.background, new Rectangle(0, 0, GameManager.screenWidth, GameManager.screenHeight), Color.WhiteSmoke);
-
+            _spriteBatch.Draw(SpriteArt.backGround, new Rectangle(0, 0, GameManager.screenWidth, GameManager.screenHeight), Color.WhiteSmoke);
+            
             if (GameManager.inGame) // if inGame is true
             {
-                GraphicsDevice.Clear(Color.CornflowerBlue);
-
-                UserInterface.gameScreen(_spriteBatch, font);
-
+                UserInterface.gameScreen(_spriteBatch, SpriteArt.font);
+                EntityCollections.Draw(_spriteBatch);
             }
             else // else inGame must be false
             {
-
-                UserInterface.HomeScreen(_spriteBatch, font);
-
+                UserInterface.HomeScreen(_spriteBatch, SpriteArt.font);
             }
-            EntityCollections.Draw(_spriteBatch);
+
+            
             _spriteBatch.End();
 
             base.Draw(gameTime);

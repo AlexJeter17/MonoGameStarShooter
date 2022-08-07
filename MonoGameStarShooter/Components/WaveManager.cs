@@ -48,7 +48,7 @@ namespace MonoGameStarShooter
                     //Spawn enemy using the Instantiate method from EntityManager
                     EntityCollections.Instantiate(new Enemy(
                         random.Next(128, (GameManager.screenWidth - 128)),    //Position to Spawn Enemy
-                        SpriteArt.Enemy1,                              //Texture for the Enemy
+                        SpriteArt.EnemyTypeOne,                              //Texture for the Enemy
                         GameManager.level1Speed,                             //Speed of the Enemy
                         GameManager.level1Health                             //Health of the Enemy
                     ));
@@ -58,7 +58,7 @@ namespace MonoGameStarShooter
                     remainingEnemiesToSpawn -= 1;
                     EntityCollections.Instantiate(new Enemy(
                         random.Next(128, (GameManager.screenWidth - 128)),
-                        SpriteArt.Enemy2,
+                        SpriteArt.EnemyTypeTwo,
                         GameManager.level2Speed,
                         GameManager.level2Health
                     ));

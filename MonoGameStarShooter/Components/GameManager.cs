@@ -23,15 +23,6 @@ namespace MonoGameStarShooter
         public static float level2Speed = 5f;
 
         public static bool inGame = false;
-
-        // Game Sounds
-        public static Song song;
-        public static SoundEffect shootSound;
-        public static SoundEffect explosion;
-        public static SoundEffect gameOver;
-        public static SoundEffect hpDown;
-
-
     }
 }
 

@@ -28,13 +28,6 @@ namespace MonoGameStarShooter
             {
                 player = new Player(SpriteArt.Player, new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight - 200));
                 Instantiate(player);
-                //Manually Instantiate a new Enemy on startup
-                Instantiate(new Enemy(
-                GameManager.screenWidth / 2, //Spawn at the top center
-                SpriteArt.Enemy1,            //Use the Enemy1 sprite from SpriteArt
-                3f,                          //Set the new speed of Enemy to 3
-                2                            //Health points of the Enemy
-                ));
                 hasInitialized = true;
             }
         }

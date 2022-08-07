@@ -8,13 +8,13 @@ namespace MonoGameStarShooter
         public int health = 2;
         protected float dropSpeed = (1 * GameManager.SCALE);
 
-        //Variables to control hit effects
+
+        //Variables that control OnHit effects
         protected Color tint = Color.White;
         private int hitCooldown = 0;
         private int hitFrames = 10;
         private int knockbackMultiplier = 3;
-
-
+        
         public Enemy(int width, Texture2D image, float newSpeed, int healthPoints)
         {
             //From Part 4
@@ -32,13 +32,13 @@ namespace MonoGameStarShooter
             if (health <= 0)
             {
                 EntityCollections.score += ((int)dropSpeed - 1);
-                GameManager.explosion.Play(0.7f, 0.0f, 0.0f);
+                SpriteArt.explosion.Play(0.7f, 0.0f, 0.0f);
                 isActive = false;
             }
             //When the Enemy reaches the edge of screen, remove itself
             if (pos.Y >= GameManager.screenHeight)
             {
-                GameManager.hpDown.Play(0.25f, 0.0f, 0.0f);
+                SpriteArt.hpDown.Play(0.25f, 0.0f, 0.0f);
                 isActive = false;
                 EntityCollections.player.hp -= 1;
             }
@@ -52,15 +52,15 @@ namespace MonoGameStarShooter
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(
-            texture,
-            pos,
-            null,
-            tint,                       //Tint Color
-            0f,
-            Vector2.Zero,
-            GameManager.SCALE,
-            SpriteEffects.None,
-            0f);
+                texture,                        //Texture
+                pos,                            //Position
+                null,                           //What portion of the sprite to draw (Default Draws whole sprite)
+                tint,                           //Tint Color
+                0f,                             //Rotation
+                Vector2.Zero,                   //Origin
+                GameManager.SCALE,       //Scale
+                SpriteEffects.None,             //Effects
+                0f);
         }
 
         public void OnHit()

@@ -10,21 +10,25 @@ The User Interface is start of the game, so we will be interpreting some new log
 This article will answer all these questions and hopefully lead you into more of your own creative ideas for starting a game.
 
 **The goal of this article is to ensure you have a basic and working User Interface. That will look something like this:**
-![](https://i.imgur.com/6cAgYYF.gif)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_MainScreen.gif)
 
 
 ## Set up your SpriteFont!
 
 We will be uploading a font in a similar manner to the way we create sprites.
 1. **Open up content.mgcb**
+
 2. **Right click on the content file, press add and then new item.**
-![](https://i.imgur.com/TKv5NvS.png)
+
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_MGCB_Add_Font1.png)
 
 3. **Click Spritefont description and give the file a name then click create.**
-![](https://i.imgur.com/K1culLo.png)
+
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_MGCB_New_File.png)
 
 4. **Double click on the new file in content.mgcb and youll see this:**
-![](https://i.imgur.com/wecshue.png)
+
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_MGCB_Edit_Font_File.png)
 
 5. **Now change the SIZE to 30**
 
@@ -282,7 +286,8 @@ protected override void Draw(GameTime gameTime)
 {
     _spriteBatch.Begin();
     _spriteBatch.Draw(SpriteArt.backGround, new Rectangle(0, 0, GameManager.screenWidth, GameManager.screenHeight), Color.WhiteSmoke);
-     
+    EntityManager.Draw(_spriteBatch);
+    
     if (GameManager.inGame) // if inGame is true
     {
         UserInterface.gameScreen(_spriteBatch, font);
@@ -291,10 +296,7 @@ protected override void Draw(GameTime gameTime)
     {
         UserInterface.HomeScreen(_spriteBatch, font);
     }
-    
-    EntityManager.Draw(_spriteBatch);
     _spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
@@ -309,6 +311,6 @@ The draw methods for EntityManager and Background are untouched otherwise, howev
 
 Now you can run the game and see the user interface in action:
 
-<img src="https://i.imgur.com/6cAgYYF.gif" width="230"/> <img src="https://i.imgur.com/DRbLJMA.gif" width="230"/> <img src="https://i.imgur.com/6VxyjaB.gif" width="230"/>
+<img src="https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_MainScreen.gif" width="230"/> <img src="https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_InGameScreen.gif" width="230"/> <img src="https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_GameOver.gif" width="230"/>
 
-Congrats! You now have a working user Interface! For [Part 11: Sounds and music](https://hackmd.io/-H9VGZWaRLO1xyZM40_Taw) you will learn how play sounds and music inside your game
+Congrats! You now have a working user Interface! For [Part 11: Sounds and music](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/11_Part%2011%20Sounds%20and%20Music!.md) you will learn how play sounds and music inside your game.

@@ -19,15 +19,15 @@ namespace MonoGameStarShooter
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(
-                    texture,                      //Texture 
-                    pos,                          //Position
-                    null,
-                    Color.White,
-                    0f,
-                    Vector2.Zero,
-                    GameManager.SCALE,     //Scale
-                    SpriteEffects.None,
-                    0f);
+                texture,                        //Texture
+                pos,                            //Position
+                null,                           //What portion of the sprite to draw (Default Draws whole sprite)
+                Color.White,                           //Tint Color
+                0f,                             //Rotation
+                Vector2.Zero,                   //Origin
+                GameManager.SCALE,       //Scale
+                SpriteEffects.None,             //Effects
+                0f);                            //Z-Layer
         }
 
         public virtual void createHitbox()

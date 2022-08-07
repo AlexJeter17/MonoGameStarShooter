@@ -4,9 +4,9 @@ namespace MonoGameStarShooter
 {
     static class WaveManager
     {
-        public static int wave = -1;
-        public static int remainingEnemiesToSpawn = 0;
-        private static int maxNumEnemies = 0;
+        public static int wave = 0;
+        static int remainingEnemiesToSpawn = 0;
+        static int maxNumEnemies = 0;
 
         static int spawnRate = 50;
         static int spawnDelay = 0;

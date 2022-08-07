@@ -5,7 +5,6 @@ namespace MonoGameStarShooter
 {
     abstract class Entity
     {
-        protected Color tint = Color.White;
         protected Texture2D texture;
         public Rectangle hitbox;
         public Vector2 pos;
@@ -22,7 +21,7 @@ namespace MonoGameStarShooter
                 texture,                        //Texture
                 pos,                            //Position
                 null,                           //What portion of the sprite to draw (Default Draws whole sprite)
-                tint,                           //Tint Color
+                Color.White,                           //Tint Color
                 0f,                             //Rotation
                 Vector2.Zero,                   //Origin
                 GameManager.SCALE_FACTOR,       //Scale

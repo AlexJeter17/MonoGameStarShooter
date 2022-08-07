@@ -9,10 +9,12 @@ namespace MonoGameStarShooter
         public int health = 2;
         protected float dropSpeed = (1 * GameManager.SCALE_FACTOR);
 
+
         //Variables that control OnHit effects
-        public int hitCooldown = 0;
-        public int hitFrames = 10;
-        public int knockbackMultiplier = 3;
+        protected Color tint = Color.White;
+        private int hitCooldown = 0;
+        private int hitFrames = 10;
+        private int knockbackMultiplier = 3;
         
         public Enemy(int width, Texture2D image, float newSpeed, int healthPoints)
         {
@@ -40,6 +42,19 @@ namespace MonoGameStarShooter
             pos.Y += dropSpeed;
             OnHitEffect();
             updateHitbox();
+        }
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(
+                texture,                        //Texture
+                pos,                            //Position
+                null,                           //What portion of the sprite to draw (Default Draws whole sprite)
+                tint,                           //Tint Color
+                0f,                             //Rotation
+                Vector2.Zero,                   //Origin
+                GameManager.SCALE_FACTOR,       //Scale
+                SpriteEffects.None,             //Effects
+                0f);
         }
 
         public void OnHit() 

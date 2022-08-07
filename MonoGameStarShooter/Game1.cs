@@ -9,10 +9,8 @@ namespace MonoGameStarShooter
         //Initial Variables
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private SpriteFont font;
         
 
- 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -32,7 +30,6 @@ namespace MonoGameStarShooter
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            font = Content.Load<SpriteFont>("File");
             SpriteArt.Load(Content);
         }
 
@@ -48,34 +45,30 @@ namespace MonoGameStarShooter
             }
             if (GameManager.inGame)
             {
+                UserInterface.hasStarted = true;
                 EntityCollections.Initialize();
                 EntityCollections.Update();
                 WaveManager.Update();
-                base.Update(gameTime);
             }
- 
-
+            base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             _spriteBatch.Begin();
+            _spriteBatch.Draw(SpriteArt.backGround, new Rectangle(0, 0, GameManager.screenWidth, GameManager.screenHeight), Color.WhiteSmoke);
+
             if (GameManager.inGame)
             {
                 GraphicsDevice.Clear(Color.CornflowerBlue);
-
-                UserInterface.gameScreen(_spriteBatch, font);
-
+                UserInterface.gameScreen(_spriteBatch, SpriteArt.font);
+                EntityCollections.Draw(_spriteBatch);
             }
             else
             {
-
-                UserInterface.HomeScreen(_spriteBatch, font);
-                
+                UserInterface.HomeScreen(_spriteBatch, SpriteArt.font);  
             }
-            EntityCollections.Draw(_spriteBatch);
             _spriteBatch.End();
-
             base.Draw(gameTime);
         }
 

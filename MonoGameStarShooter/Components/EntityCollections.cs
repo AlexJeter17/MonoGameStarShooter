@@ -1,68 +1,49 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGameStarShooter
 {
     static class EntityCollections
     {
-        
-        //All Entities
+        //From Part 4
         static List<Entity> entities = new List<Entity>();
-
-        //Entity specific lists and Player 
-        public static List<Enemy> enemies = new List<Enemy>();
         static List<Bullet> bullets = new List<Bullet>();
-        public static Player player1;
+        //The enemy list to add
+        public static List<Enemy> enemies = new List<Enemy>();
 
-        //Score counter
+        //New Variables and Method
+        public static Player player;
+
         public static int score = 0;
-        
 
-        static bool hasInitalized = false;
-        static Random random = new Random();
-        //Function to initialize player, only runs once.
+
+        public static bool hasInitialized = false;
+
         public static void Initialize()
         {
-            if (hasInitalized == false)
+            if (hasInitialized == false)
             {
-                player1 = new Player(new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight / 1.2f), SpriteArt.Player);
-                Instantiate(player1);
-                hasInitalized = true;
+                player = new Player(SpriteArt.Player, new Vector2(GameManager.screenWidth / 2, GameManager.screenHeight - 200));
+                Instantiate(player);
+                //Manually Instantiate a new Enemy on startup
+                Instantiate(new Enemy(
+                GameManager.screenWidth / 2, //Spawn at the top center
+                SpriteArt.Enemy1,            //Use the Enemy1 sprite from SpriteArt
+                3f,                          //Set the new speed of Enemy to 3
+                2                            //Health points of the Enemy
+                ));
+                hasInitialized = true;
             }
         }
-        public static void Update()
+        public static void Instantiate(Entity entity)
         {
-            //Update all entities on screen
-            for (int i = 0; i < entities.Count; i++)
-            {
-                entities[i].Update();
-            }
-            
-            //If any entities have isActive set to false, remove them from the lists
-            entities = entities.Where(obj => obj.isActive).ToList();
-            enemies = enemies.Where(obj => obj.isActive).ToList();
-            bullets = bullets.Where(obj => obj.isActive).ToList();
-            
-
-
-
-            //Handle Collisions between enemies and bullets
-            for (int i = 0; i < enemies.Count; i++)
-            {
-                for (int j = 0; j < bullets.Count; j++)
-                {
-                    //Check if any of the enemies or bullets collide wiwth each other
-                    if (bullets[j].hitbox.Intersects(enemies[i].hitbox))
-                    {
-                        //Collision logic here, if enemies are hit, call OnHit and remove bullet
-                        enemies[i].OnHit();
-                        bullets[j].isActive = false;
-                    }
-                }
-            }
+            entities.Add(entity);
+            if (entity is Bullet) bullets.Add(entity as Bullet);
+            else if (entity is Enemy) enemies.Add(entity as Enemy);
         }
-        //Draw all entities in the list
         public static void Draw(SpriteBatch spriteBatch)
         {
             for (int i = 0; i < entities.Count; i++)
@@ -70,12 +51,37 @@ namespace MonoGameStarShooter
                 entities[i].Draw(spriteBatch);
             }
         }
-        //Create the entity on screen and add them to an appropriate list
-        public static void Instantiate(Entity entity)
+
+        public static void Update()
         {
-            entities.Add(entity);
-            if (entity is Enemy) enemies.Add(entity as Enemy);
-            else if (entity is Bullet) bullets.Add(entity as Bullet);
+            //From part 4
+            for (int i = 0; i < entities.Count; i++)
+            {
+                entities[i].Update();
+            }
+
+            //If any entities have isActive set to false, remove them from the lists
+            entities = entities.Where(obj => obj.isActive).ToList();
+            bullets = bullets.Where(obj => obj.isActive).ToList();
+            enemies = enemies.Where(obj => obj.isActive).ToList();
+
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                for (int j = 0; j < bullets.Count; j++)
+                {
+                    //Check if any of the enemies or bullets collide with each other
+                    if (bullets[j].hitbox.Intersects(enemies[i].hitbox))
+                    {
+                        //Subtract enemy health by one, remove bullet
+                        //enemies[i].health -= 1;
+                        enemies[i].OnHit();
+                        bullets[j].isActive = false;
+                    }
+                }
+            }
+
+
+
         }
 
         public static void ClearEntities()

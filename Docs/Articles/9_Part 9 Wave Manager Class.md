@@ -137,8 +137,8 @@ protected override void Update(GameTime gameTime)
 
 Now when you run the game you should be able to shoot down all the enemies and will continously spawn:
 
-![](https://i.imgur.com/rioGP7W.gif)
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/9_WaveManagerDemo.gif)
 
 
-Now that your game has spawning mechanics for your enemies, you can move on to the next section which is user interface: [Part 10: User Interface!](https://hackmd.io/LTnckC_cSl29XFo7DUog-Q)
+Now that your game has spawning mechanics for your enemies, you can move on to the next section which is user interface: [Part 10: User Interface, Scores, and Lives](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/10_Part%2010%20User%20Interface%2C%20Scores%2C%20and%20Lives.md)
 

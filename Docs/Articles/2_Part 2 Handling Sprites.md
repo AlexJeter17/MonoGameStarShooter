@@ -1,6 +1,11 @@
 # Part 2: Handling Sprites
 This section will go over how to handle sprites in a more organized way and easier to find, these will also include sprites you can download that will be used throughout this tutorial.
 
+One thing to keep in mind as we go through this tutorial is the viewpoint of the sprites and how they are visualized in code. Here is an image to make you visualize it easier.
+
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/2_Coords.png)
+
+This being said, people often use the first quadrant of a graph, or goes from bottom left to top right for sizing. With sprites it actually goes from top to bottom, where the top = 0 and the bottom is = screen length.
 
 ## Assets
 Before you start, download these images as a PNG as it will be part of the game you will be building in this tutorial series. You will need to download all of them.
@@ -14,6 +19,8 @@ Right click the image, then click **Save as Image**. Make sure to save it as a P
 ![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/EnemyTier2.png) EnemyTier2
 
 ![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/Bullet.png) Bullet
+
+![](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Sprites/StarBackground.jpg) StarBackground
 
 
 
@@ -90,6 +97,7 @@ You can load the rest of the assets you downloaded here. Make sure that you have
     public static Texture2D Enemy1 { get; private set; }
     public static Texture2D Enemy2 { get; private set; }
     public static Texture2D Bullet { get; private set; }
+    public static Texture2D background { get; private set; }
     
     //Function to load our content
     public static void Load(ContentManager content)
@@ -98,6 +106,7 @@ You can load the rest of the assets you downloaded here. Make sure that you have
         Enemy1 = content.Load<Texture2D>("EnemyTier1");
         Enemy2 = content.Load<Texture2D>("EnemyTier1");
         Bullet = content.Load<Texture2D>("Bullet");
+        background = content.Load<Texture2D>("StarBackground");
     }
 ```
 

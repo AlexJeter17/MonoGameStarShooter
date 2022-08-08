@@ -70,7 +70,7 @@ There are 3 important values in this draw method that we'll take a look at. The 
 
 Scaling on the other hand is handled by the GameManager. So whatever value you have in GameManager it will translate back here.
 
-In the next section [Part 4: Creating the Entity Manager](https://github.com/AlexJeter17/MonoGameStarShooter/blob/c520d0341a6dcfdf8a2db12b0007155423c476e1/Docs/Articles/4_Part%204%20Creating%20the%20Entity%20Manager.md) you will create a managing class for all entities in the game.
+In the next section [Part 4: Creating the Entity Manager](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/4_Part%204%20Creating%20the%20Entity%20Manager.md) you will create a managing class for all entities in the game.
 
 
 

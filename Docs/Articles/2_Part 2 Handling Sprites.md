@@ -104,7 +104,7 @@ You can load the rest of the assets you downloaded here. Make sure that you have
     {
         Player = content.Load<Texture2D>("PlayerShip");
         Enemy1 = content.Load<Texture2D>("EnemyTier1");
-        Enemy2 = content.Load<Texture2D>("EnemyTier1");
+        Enemy2 = content.Load<Texture2D>("EnemyTier2");
         Bullet = content.Load<Texture2D>("Bullet");
         background = content.Load<Texture2D>("StarBackground");
     }
@@ -147,6 +147,3 @@ Now when you run the game, you should see the Player image on the top left scree
 
 Once you are finished, you can go over to the next section where you create the fundamental code for all the objects in the game: [Part 3: Creating an Entity class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md)
 
-
-## Additional Resources
-[Sprites and Assets]()

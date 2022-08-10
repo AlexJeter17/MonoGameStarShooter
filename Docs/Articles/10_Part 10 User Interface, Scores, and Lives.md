@@ -314,3 +314,9 @@ Now you can run the game and see the user interface in action:
 <img src="https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_MainScreen.gif" width="230"/> <img src="https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_InGameScreen.gif" width="230"/> <img src="https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Content/10_GameOver.gif" width="230"/>
 
 Congrats! You now have a working user Interface! For [Part 11: Sounds and music](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/11_Part%2011%20Sounds%20and%20Music!.md) you will learn how play sounds and music inside your game.
+
+## References and community tutorials
+
+[TrueType fonts](https://docs.monogame.net/articles/getting_started/5_adding_basic_code.html): This shows you how to add more fonts if you wanted to dive deeper and add more pop to your game.
+
+[RB Whitakers SpriteFont tutorial](http://rbwhitaker.wikidot.com/monogame-drawing-text-with-spritefonts): Although similar to our version of spriteFonts, RB Whitaker shows a deeper dive and offers support with finding free fonts and utilizing the DrawString() function.

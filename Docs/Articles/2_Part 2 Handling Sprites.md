@@ -147,3 +147,11 @@ Now when you run the game, you should see the Player image on the top left scree
 
 Once you are finished, you can go over to the next section where you create the fundamental code for all the objects in the game: [Part 3: Creating an Entity class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md)
 
+## References and community tutorials
+
+[MGCB Editor](https://docs.monogame.net/articles/tools/mgcb_editor.html): This will show you how to get the MGCB editor downloaded and set up if you do not have it already.
+
+[RB Whitakers 2d tutorial](http://rbwhitaker.wikidot.com/monogame-2d-tutorials): This will help you understand what is going on with sprites and give you a stronger depth of all the types of sprites.
+
+
+

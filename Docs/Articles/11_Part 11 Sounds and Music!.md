@@ -39,11 +39,11 @@ First create the reference variables for each of the sounds in SpriteArt class a
 ```csharp
 //SpriteArt.cs
 ...
-public static Song song { get; private set; };
-public static SoundEffect explosion { get; private set; };
-public static SoundEffect hpDown { get; private set; };
-public static SoundEffect shootSound { get; private set; };
-public static SoundEffect gameOver { get; private set; };
+public static Song song;
+public static SoundEffect explosion;
+public static SoundEffect hpDown;
+public static SoundEffect shootSound;
+public static SoundEffect gameOver;
 ```
 
 The song variable comes from the Song class and will take in the .mp3 file to play as background home screen music.

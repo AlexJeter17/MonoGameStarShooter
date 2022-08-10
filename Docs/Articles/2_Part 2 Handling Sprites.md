@@ -79,7 +79,7 @@ Now you have to load the textures from the content folder. Here you can create a
 ```csharp
 //SpriteArt.cs
 ...
-    public static Texture2D Player { get; private set; } 
+    public static Texture2D Player;
     //Function to load our content
     public static void Load(ContentManager content)
     {
@@ -93,11 +93,11 @@ You can load the rest of the assets you downloaded here. Make sure that you have
 ...
     //Create our texture references here. If we want to get a certain sprite
     //you can use SpriteArt.Player to retrieve its texture
-    public static Texture2D Player { get; private set; }
-    public static Texture2D Enemy1 { get; private set; }
-    public static Texture2D Enemy2 { get; private set; }
-    public static Texture2D Bullet { get; private set; }
-    public static Texture2D background { get; private set; }
+    public static Texture2D Player;
+    public static Texture2D Enemy1;
+    public static Texture2D Enemy2;
+    public static Texture2D Bullet;
+    public static Texture2D background;
     
     //Function to load our content
     public static void Load(ContentManager content)

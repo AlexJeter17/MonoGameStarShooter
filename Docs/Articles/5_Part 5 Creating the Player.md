@@ -1,5 +1,5 @@
 # Part 5: Creating the Player
-In this section you will be using the Entity class from the previous section in [Part 3: Creating the Entity class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md) to create the Player class, implement keyboard player movement, and initilize the player in the Game Class.
+In this section you will be using the Entity class from the previous section in [Part 4: Creating the Entity class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md) to create the Player class, implement keyboard player movement, and initilize the player in the Game Class.
 
 ## Create a new class file
 Just like how you created the files for Entity and SpriteArt, under the Componenets folder add a new class and name it "Player"
@@ -154,3 +154,7 @@ int sideSpeed = GameManager.playerSpeed;
 
 
 To see how to make the bullet class follow this link: [Part 6: Shooting!](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/6_Part%206%20Bullets%20and%20Shooting.md)
+
+## References and community tutorials
+
+[MonoGame - adding basic code](https://docs.monogame.net/articles/getting_started/5_adding_basic_code.html): This section has a good idea of more user movement to enhacne oyur game and get a better understanding of what your sprite is doing.

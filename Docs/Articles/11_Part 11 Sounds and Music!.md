@@ -174,3 +174,8 @@ Now when you play the game, you should be able to hear the sound effects and the
 
 Once you are ready, you can move on to the final section of this tutorial which is packaging your game to share with people. [Part 12: Packaging and Delivering for Desktop](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/12_Part%2012%20Packaging%20and%20Delivery%20for%20Desktop.md)
 
+## References and community tutorials
+
+[Audio - Monogame](https://gamefromscratch.com/monogame-tutorial-audio/): This tutorial shows how to connect sounds with your keyboard amongst other cool sound ideas.
+
+[MonoGame Microsoft.Xna.Framework.Audio](https://docs.monogame.net/api/Microsoft.Xna.Framework.Audio.html): This link shows all of monogames audio files it supports and shows links to each type so you can choose the best and most effeciant sounds for your game.

@@ -26,7 +26,8 @@ Create a new project using the MonoGame Cross-Platform Desktop Application templ
 Once you have an empty project ready to go, move on to the next part: [Part 1: Creating the GameManager Class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/1_Part%201%20Creating%20the%20GameManager%20class.md)
 
 
-###### References and tutorials
-[RB Whitaker Intro to C#](http://rbwhitaker.wikidot.com/c-sharp-tutorials)
+## References and tutorials
 
-[RB Whitaker Getting started with MonoGame](http://rbwhitaker.wikidot.com/monogame-getting-started-tutorials)
+[MonoGame Getting Started](https://docs.monogame.net/articles/getting_started/0_getting_started.html): This will help you start your environment and get a greater understanding how your code will run.
+
+[RB Whitaker Intro to C#](http://rbwhitaker.wikidot.com/c-sharp-tutorials): If you are new to C# this is a great tutorial series in order to begin your steps. It starts from the very basics and teaches you as if it is your first language.

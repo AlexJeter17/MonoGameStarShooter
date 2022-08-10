@@ -3,7 +3,7 @@ In this section, you will be creating a class that handles the properties and up
 
 This article will control all the updates and draw methods of every entity, and later on in the series this will also manage collisions.
 
-> This Class referenced the Entity Manager class in the MonoGame - [Neon Shooter Sample](https://github.com/MonoGame/MonoGame.Samples/tree/develop/NeonShooter)
+> This Class referenced the Entity Manager class in the MonoGame - [Neon Shooter Sample](https://docs.monogame.net/articles/samples.html)
 
 ## The need for an Entity Manager
 In the last section [Part 3: Creating the Entity class](https://github.com/AlexJeter17/MonoGameStarShooter/blob/main/Docs/Articles/3_Part%203%20Creating%20an%20Entity%20class.md) you designed an Entity class that you can use to branch off and make the player and enemies. However you need a way to track all the objects on screen, and update them. Putting this logic inside the main file will quickly be difficult to read.

@@ -45,6 +45,6 @@ You have finished making a game from start to finish using MonoGame!
 
 Want to learn more? Visit the [Community Tutorials](https://docs.monogame.net/articles/tutorials.html) section for more resources.
 
+For more Samples of great monogame ideas go to [Samples and Demos](https://docs.monogame.net/articles/samples.html).
+
 Interested in connecting with other members of the community and showcase your projects? Visit the [MonoGame Discord Server](https://discord.com/invite/monogame) here!
-
-
